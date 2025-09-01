@@ -1,4 +1,19 @@
 {
+  "api": {
+    "amplifycli": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "authenticationType": "AWS_IAM"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
   "auth": {
     "amplifyclibaba0483": {
       "customAuth": false,
@@ -25,6 +40,31 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "listUserLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_listUserLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "listUserLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_listUserLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "listUserLambda"
+        }
+      ]
     }
   }
 }

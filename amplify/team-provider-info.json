@@ -14,6 +14,15 @@
     "categories": {
       "auth": {
         "amplifyclibaba0483": {}
+      },
+      "function": {
+        "listUserLambda": {
+          "deploymentBucketName": "amplify-amplifycli-dev-2455f-deployment",
+          "s3Key": "amplify-builds/listUserLambda-6c6d634930334a735578-build.zip"
+        }
+      },
+      "api": {
+        "amplifycli": {}
       }
     }
   }
