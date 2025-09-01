@@ -1,6 +1,13 @@
+"use client";
 import Image from "next/image";
+import { Amplify } from "aws-amplify";
+import "@aws-amplify/ui-react/styles.css";
+import { withAuthenticator } from "@aws-amplify/ui-react";
+import aws_exports from "./aws-exports";
 
-export default function Home() {
+Amplify.configure(aws_exports);
+
+function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -101,3 +108,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default withAuthenticator(Home);
